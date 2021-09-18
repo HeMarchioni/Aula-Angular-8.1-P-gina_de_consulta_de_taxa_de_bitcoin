@@ -1,0 +1,44 @@
+<div class="ml-4">
+<h1 class="mt-4 "> Desenvolvido por: </h1>
+
+<h2 class="mb-3">Henrique Marchioni</h2>
+
+<p>
+    Ra: 0050831921010
+</p>
+
+<a href="https://github.com/HeMarchioni" target="_blank"> GitHub - Portfolio</a>
+</div>
+
+
+
+
+<div class="panel panel-primary my-3">
+<div class="panel-heading">
+<h2>Cotação Bitcoin</h2>
+</div>
+<div class="panel-body">
+<table class="table table-striped">
+    <thead>
+    <tr>
+    <th>Data/hora</th>
+    <th>USD</th>
+    <th>BRL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cota of this.bitcoinService.cotaBitcoin">
+        <td>{{cota.time.updated}}</td>
+      <td>
+        R$:
+      {{cota.bpi.USD.rate_float}}
+    </td>
+    <td>
+      US$:
+      {{cota.bpi.BRL.rate_float}}
+    </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</div>
